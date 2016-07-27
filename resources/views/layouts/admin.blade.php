@@ -17,6 +17,8 @@
     <link href="{{asset('css/libs.css')}}" rel="stylesheet">
 
 
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -51,23 +53,23 @@
         <ul class="nav navbar-top-links navbar-right">
 
 
+                    
+                        <li>
+                            <a href="{{ url('/logout') }}" class="btn btn-primary" > Logout </a>
+                        </li>
+                    
             <!-- /.dropdown -->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li><a href="{{ url('/logout') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                    </li>
-                </ul>
-                <!-- /.dropdown-user -->
-            </li>
-            <!-- /.dropdown -->
+                   
+                        <!-- <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/logout') }}">Logout</a></li>
+                            </ul>
+                        </li>
+            <!-- /.dropdown --> 
 
 
         </ul>
@@ -96,7 +98,6 @@
         {{--</li>--}}
         {{--@endif--}}
         {{--</ul>--}}
-
 
 
 
